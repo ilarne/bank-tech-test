@@ -2,7 +2,7 @@ describe("Account", function() {
   var account;
 
   beforeEach(function() {
-    account = new Account();
+    account = new Account;
   });
 
   it("should start account balance with 0", function() {
@@ -43,15 +43,4 @@ describe("Account", function() {
       expect(account.balance).toEqual(0);
     });
   });
-
-  describe('#printStatement', function() {
-    it('prints transaction history', function() {
-      account.depositAmount(1000, '16/01/2012')
-      account.depositAmount(1000, '15/01/2012')
-      account.printStatement()
-      expect(account.printStatement()).toEqual("date || credit || debit || balance"+'\n'+
-      "16/01/2012 || 1000 || 0 || 1000"+'\n'+
-      "15/01/2012 || 1000 || 0 || 2000"+'\n');
-    });
   });
-});

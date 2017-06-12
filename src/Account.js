@@ -20,12 +20,3 @@ Account.prototype.withdrawAmount = function(amount, date) {
   this.balance -= amount;
   this.balanceHistory.push({date: date, credit: 0, debit: amount, balance: this.balance})
 }
-
-Account.prototype.printStatement = function() {
-  var bankStatement = "date || credit || debit || balance" + '\n';
-  transactionHistory = this.balanceHistory.reverse()
-  transactionHistory.forEach(function(transaction) {
-    bankStatement += transaction.date + " || " + transaction.credit + " || " + transaction.debit+ " || " + transaction.balance + '\n'
-  });
-  return bankStatement;
-}
