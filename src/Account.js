@@ -17,6 +17,10 @@ Account.prototype.depositAmount = function(amount, date) {
 }
 
 Account.prototype.withdrawAmount = function(amount, date) {
-  this.balance -= amount;
-  this.balanceHistory.push({date: date, credit: 0, debit: amount, balance: this.balance})
+  if (this.balance - amount < 0) {
+    throw("You don't have enough funds.")
+  } else {
+    this.balance -= amount;
+    this.balanceHistory.push({date: date, credit: 0, debit: amount, balance: this.balance})
+  }
 }

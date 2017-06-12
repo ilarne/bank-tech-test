@@ -1,8 +1,5 @@
 describe("Printer", function() {
-    var account;
-    var printer;
 
-  describe('#printStatement', function() {
     it('prints transaction history', function() {
       var account = new Account;
       var printer = new Printer;
@@ -13,4 +10,3 @@ describe("Printer", function() {
       "15/01/2012 || 1000 || 0 || 1000"+'\n');
     });
   });
-});

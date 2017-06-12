@@ -11,7 +11,7 @@ describe("Account", function() {
   });
 
   describe('#depositAmount', function() {
-    it('desposits money', function() {
+    it('deposits money', function() {
       account.depositAmount(1000)
       expect(account.balance).toEqual(1000);
     });
@@ -33,6 +33,10 @@ describe("Account", function() {
       account.balance = 1000;
       account.withdrawAmount(50, '14/01/2012')
       expect(account.balanceHistory).toEqual([{date: '14/01/2012', credit: 0, debit: 50, balance: 950}])
+    });
+
+    it('stops you withdrawing more than you have', function() {
+      expect(function(){account.withdrawAmount(100)}).toThrow("You don't have enough funds.");
     });
   });
 
