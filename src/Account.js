@@ -3,14 +3,6 @@ function Account() {
   this.balanceHistory = []
 }
 
-Account.prototype.displayBalance = function() {
-  return this.balance;
-}
-
-Account.prototype.displayBalanceHistory = function() {
-  return this.balanceHistory;
-}
-
 Account.prototype.depositAmount = function(amount, date) {
   this.balance += amount;
   this.balanceHistory.push({date: date, credit: amount, debit: 0, balance: this.balance})

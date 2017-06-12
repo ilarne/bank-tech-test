@@ -6,8 +6,11 @@ describe("Account", function() {
   });
 
   it("should start account balance with 0", function() {
-    account.displayBalance()
     expect(account.balance).toEqual(0)
+  });
+
+  it("should start balance history as empty", function() {
+    expect(account.balanceHistory).toEqual([])
   });
 
   describe('#depositAmount', function() {
@@ -47,4 +50,4 @@ describe("Account", function() {
       expect(account.balance).toEqual(0);
     });
   });
-  });
+});
