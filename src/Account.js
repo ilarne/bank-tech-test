@@ -5,7 +5,7 @@ function Account() {
 
 Account.prototype.depositAmount = function(amount, date) {
   this.balance += amount;
-  this.balanceHistory.push({date: date, credit: amount, debit: 0, balance: this.balance})
+  this.balanceHistory.push({date: date, credit: amount, debit: "", balance: this.balance})
 }
 
 Account.prototype.withdrawAmount = function(amount, date) {
@@ -13,6 +13,6 @@ Account.prototype.withdrawAmount = function(amount, date) {
     throw("You don't have enough funds.")
   } else {
     this.balance -= amount;
-    this.balanceHistory.push({date: date, credit: 0, debit: amount, balance: this.balance})
+    this.balanceHistory.push({date: date, credit: "" , debit: amount, balance: this.balance})
   }
 }

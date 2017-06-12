@@ -21,7 +21,7 @@ describe("Account", function() {
 
     it('updates balance history', function() {
       account.depositAmount(50, '14/01/2012')
-      expect(account.balanceHistory).toEqual([{date: '14/01/2012', credit: 50, debit: 0, balance: 50}])
+      expect(account.balanceHistory).toEqual([{date: '14/01/2012', credit: 50, debit: "", balance: 50}])
     });
   });
 
@@ -35,7 +35,7 @@ describe("Account", function() {
     it('updates balance history', function() {
       account.balance = 1000;
       account.withdrawAmount(50, '14/01/2012')
-      expect(account.balanceHistory).toEqual([{date: '14/01/2012', credit: 0, debit: 50, balance: 950}])
+      expect(account.balanceHistory).toEqual([{date: '14/01/2012', credit: "", debit: 50, balance: 950}])
     });
 
     it('stops you withdrawing more than you have', function() {
