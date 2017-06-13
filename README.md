@@ -22,7 +22,7 @@ This script can be run directly from Google Chrome using Console.
 > account.depositAmount(1000, '10/01/2012')
 > account.depositAmount(2000, '13/01/2012')
 > account.withdrawAmount(500, '14/01/2012')
-> printer.printStatement(account)
+> printer.printStatement(account.transactions)
 > "date || credit || debit || balance
 > 14/01/2012 ||  || 500 || 2500
 > 13/01/2012 || 2000 ||  || 3000
