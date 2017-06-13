@@ -1,11 +1,11 @@
 function Account() {
   this.balance = 0;
-  this.balanceHistory = []
+  this.transactions = new TransactionHistory();
 }
 
 Account.prototype.depositAmount = function(amount, date) {
   this.balance += amount;
-  this.balanceHistory.push({date: date, credit: amount, debit: "", balance: this.balance})
+  this.transactions.storeCreditHistory(date, amount, this.balance)
 }
 
 Account.prototype.withdrawAmount = function(amount, date) {
@@ -13,6 +13,6 @@ Account.prototype.withdrawAmount = function(amount, date) {
     throw("You don't have enough funds.")
   } else {
     this.balance -= amount;
-    this.balanceHistory.push({date: date, credit: "" , debit: amount, balance: this.balance})
+    this.transactions.storeDebitHistory(date, amount, this.balance)
   }
 }
