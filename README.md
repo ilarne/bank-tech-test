@@ -34,6 +34,6 @@ This script can be run directly from Google Chrome using Console.
 
 Tests are run with Jasmine. 
 
-1. Clone this repo to local machine. 
+1. Clone this repo to local machine and navigate to the folder locally.
 2. From your command line, run `$open SpecRunner.html`.
 3. The tests will appear in your browser. 
