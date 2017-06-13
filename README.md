@@ -12,7 +12,7 @@ This script can be run directly from Google Chrome using Console.
   - On Mac: ⌘ + Shift + C.
   - On Windows / Linux: Ctrl + Shift + C OR F12.
  3. Click on the Console tab.
-2. Copy and paste the contents of `Printer.js` and `Account.js` (found in the 'src' folder on this repo).
+2. Copy and paste the contents of `Printer.js`, `Transaction.js`, `TransactionHistory.js` and `Account.js` (found in the 'src' folder on this repo).
 
 ### Demonstration of tech test acceptance criteria
 
