@@ -1,11 +1,11 @@
 function TransactionHistory() {
-  this.balanceHistory = [];
+  this.history = [];
 }
 
 TransactionHistory.prototype.storeCreditHistory = function(date, amount, balance) {
-  this.balanceHistory.push({date: date, credit: amount, debit: "", balance: balance})
+  this.history.push(new Transaction(date, amount, "", balance))
 }
 
 TransactionHistory.prototype.storeDebitHistory = function(date, amount, balance) {
-  this.balanceHistory.push({date: date, credit: "", debit: amount, balance: balance})
+  this.history.push(new Transaction(date, "", amount, balance))
 }
