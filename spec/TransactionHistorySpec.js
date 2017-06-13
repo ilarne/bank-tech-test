@@ -5,7 +5,7 @@ describe("TransactionHistory", function() {
     transactions = new TransactionHistory();
   });
 
-  it("should start balance history as empty", function() {
+  it("should start transaction history as empty", function() {
     expect(transactions.history).toEqual([])
   });
 
